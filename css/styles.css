@@ -8,7 +8,8 @@
 }
 
 :root {
-    --primary-color: #8B0000;
+    /*--primary-color: #8B0000;*/
+    --primary-color: #bd1f2d;
     --primary-hover: #a00000;
     --bg-dark: #000000;
     --bg-dark-2: #111111;
@@ -291,6 +292,15 @@ body {
     position: absolute;
     inset: 0;
     background: linear-gradient(135deg, transparent 48%, rgba(255, 255, 255, 0.05) 49%, rgba(255, 255, 255, 0.05) 51%, transparent 52%);
+}
+
+.hero-img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    display: block;
 }
 
 @media (max-width: 1024px) {
@@ -892,16 +902,36 @@ body {
     color: var(--text-muted);
 }
 
-.footer-bottom {
-    padding-top: var(--spacing-lg);
-    border-top: 1px solid var(--border-color);
-    text-align: center;
+/* Estilos para los enlaces del crédito en el footer */
+.footer-credit a {
+    color: #888888; /* El gris oscuro que buscabas */
+    text-decoration: none; /* Le quita el subrayado molesto */
+    font-weight: 500;
+    transition: color 0.2s ease; /* Hace que el cambio de color sea suave */
 }
 
+/* Efecto cuando pasan el mouse por encima */
+.footer-credit a:hover {
+    color: #2ecc71; /* Se ilumina en tu verde padel */
+    text-decoration: underline; /* Opcional: aparece el subrayado solo al pasar el mouse */
+}
+
+/* Contenedor del copyright */
+.footer-bottom {
+    display: flex;
+    justify-content: flex-end; /* Empuja el contenido totalmente a la derecha */
+    width: 100%;
+    border-top: 1px solid #222222; /* Línea sutil divisoria si no la tenías */
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+/* Texto del copyright */
 .footer-copyright {
-    color: var(--text-dark-muted);
-    font-size: 0.75rem;
+    color: #666666; /* Un gris sutil para que no compita visualmente */
+    font-size: 0.85rem;
     margin: 0;
+    text-align: right;
 }
 
 @media (max-width: 768px) {
